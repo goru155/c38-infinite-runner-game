@@ -83,6 +83,9 @@ function draw() {
   //displaying score
   text("Score: "+ score, 500,50);
   
+    camera.position.x=325;
+  camera.position.y=trex.y;
+  
   
   if(gameState === PLAY){
 
@@ -146,20 +149,12 @@ function draw() {
      
     if(mousePressedOver(restart)) {
       reset();
-    }
-
-
-     
+    }   
    }
   
- 
   //stop trex from falling down
   trex.collide(invisibleGround);
   
-  camera.position.x=325;
-  camera.position.y=trex.y;
-  
-
   drawSprites();
 }
 
