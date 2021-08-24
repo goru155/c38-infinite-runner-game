@@ -224,6 +224,6 @@ function spawnClouds() {
     
     //add each cloud to the group
     cloudsGroup.add(cloud);
-  }
+  } 
 }
 
