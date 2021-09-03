@@ -9,13 +9,16 @@ var cloudsGroup, cloudImage;
 var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6;
 
 var score;
-var gameOverImg,restartImg
-var jumpSound , checkPointSound, dieSound
+var gameOverImg,restartImg;
+var jumpSound , checkPointSound, dieSound;
+var bg_img;
 
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
   trex_collided = loadAnimation("trex_collided.png");
   
+  bg_img=loadImage("sky.png")
+
   groundImage = loadImage("ground2.png");
   
   cloudImage = loadImage("cloud.png");
@@ -39,7 +42,7 @@ function setup() {
   createCanvas(600, 200);
 
   var message = "This is a message";
- console.log(message)
+ console.log(message);
   
   trex = createSprite(50,160,20,50);
   trex.addAnimation("running", trex_running);
@@ -79,7 +82,7 @@ function setup() {
 
 function draw() {
   
-  background(180);
+  background(bg_img);
   //displaying score
   text("Score: "+ score, 500,50);
   
